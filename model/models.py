@@ -226,7 +226,7 @@ def run_ensemble_strategy(df, unique_trade_date, rebalance_window, validation_wi
 
         ############## Trading starts ##############    
         print("======Trading from: ", unique_trade_date[i - rebalance_window], "to ", unique_trade_date[i])
-        #print("Used Model: ", model_ensemble)
+        print("Used Model: ", model_ensemble)
         last_state_ensemble = DRL_prediction(df=df, model=model_ensemble, name="ensemble",
                                              last_state=last_state_ensemble, iter_num=i,
                                              unique_trade_date=unique_trade_date,
