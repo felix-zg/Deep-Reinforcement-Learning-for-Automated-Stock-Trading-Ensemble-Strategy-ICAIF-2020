@@ -4,6 +4,12 @@ import numpy as np
 import time
 from stable_baselines.common.vec_env import DummyVecEnv
 
+import os
+import logging
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
+tf.get_logger().setLevel(logging.ERROR)
+
 # preprocessor
 from preprocessing.preprocessors import *
 # config
